@@ -10,13 +10,13 @@ namespace Exo_P3.Controllers
         [Route("index")]
         [Route("index/{id?}")]
         [Route("{id?}")]
-        public IActionResult Index( int? id)
+        public IActionResult Index(int? id)
         {
 
             var employees = GenerateEmployees();
             if (id == null)
             {
-                return Content(EmployeesToString(employees));
+                return View(EmployeesToString(employees));
             }
             var employeeIndex=employees.FirstOrDefault(x => x.Id == id);
             if (employeeIndex == null)
@@ -24,7 +24,7 @@ namespace Exo_P3.Controllers
                 return new EmptyResult();
                 //return NotFound($" l'employer avec id "+ employeeIndex+" n'existe pas");
             }
-            return Content(employeeIndex.ToString());
+            return View(employeeIndex);
         }
 
         private static IList<Employee> GenerateEmployees()
