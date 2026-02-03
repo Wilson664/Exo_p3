@@ -1,4 +1,5 @@
 ﻿using Exo_P3.Models;
+using Exo_P3.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography.Xml;
 
@@ -14,17 +15,19 @@ namespace Exo_P3.Controllers
         {
 
             var employees = GenerateEmployees();
-            if (id == null)
-            {
-                return View(EmployeesToString(employees));
-            }
-            var employeeIndex=employees.FirstOrDefault(x => x.Id == id);
-            if (employeeIndex == null)
-            {
-                return new EmptyResult();
-                //return NotFound($" l'employer avec id "+ employeeIndex+" n'existe pas");
-            }
-            return View(employeeIndex);
+            //if (id == null)
+            //{
+            //    return View(EmployeesToString(employees));
+            //}
+            //var employeeIndex=employees.FirstOrDefault(x => x.Id == id);
+            //if (employeeIndex == null)
+            //{
+            //    return new EmptyResult();
+            //    //return NotFound($" l'employer avec id "+ employeeIndex+" n'existe pas");
+            //}
+            var vm = new EmployeesIndexVM();
+            vm.Employees = employees;
+            return View(vm);
         }
 
         private static IList<Employee> GenerateEmployees()

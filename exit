@@ -1,0 +1,11 @@
+[33mcommit e1fe2f779b532b48c83e0623c0c52875f67b6791[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/feature/new_feat[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mfeature/new_feat[m[33m)[m
+Author: brayan_wilson <brayanwilson@gmail.com>
+Date:   Thu Jan 29 19:27:07 2026 -0500
+
+    Ajout commentaire
+
+[33mcommit 66a997f5165ce06fbce1376c8bdc2283c9876e2e[m
+Author: brayan_wilson <brayanwilson@gmail.com>
+Date:   Thu Jan 29 19:07:01 2026 -0500
+
+    Ajout model employee
